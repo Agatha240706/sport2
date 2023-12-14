@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+      {% endwith %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+    <div class="sport-card">
+      <div class="page-header">
+          <h1>{{ Titulo }}</h1>
+      </div>
+{##na hora que eu apertar o submit, vai fazer um  método post, que será enviado para a rota intermediária=criar#}
+      <form class="formtudo" action="/criar" method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="tipo">Jogo de interesse</label>
+            <input type="text" id="jogo" name="jogo" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="altura">Posição no jogo</label>
+            <input type="text" id="posicao" name="posicao" class="form-control">
+          </div>
+           <div class="form-group">
+            <label for="peso">Ranking</label>
+            <input type="text" id="ranking" name="ranking" class="form-control">
+          </div>
+          <button type="submit" id="button" name="salvar" class="btn btn-primary btn-salvar">Salvar</button>
+          <button type="submit" id="button" name="deslogar" class="btn btn-primary btn-salvar">Deslogar</button>
+        </fieldset>
+      </form>
+    </div>
+</body>
+</html>

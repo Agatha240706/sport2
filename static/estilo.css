@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7d8d8;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sport-card {
+    background-color: #75dede;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 70px;
+    text-align: left;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+
+.form-group{
+    text-align: left
+}
+
+img {
+    max-width: 200px;
+}
+
+.formtudo input{
+    display: block;
+    padding: 6px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #2fefd1;
+    border-radius: 10px;
+    width: 350px;
+    margin-bottom: 10px;
+    margin: 10px auto;
+}
+
+
+.btn{
+    display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #98f3bc;
+  border-radius: 5px;
+  color: #13dea1;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+  background-color: #29eab0;
+  color: #ffffff;
+}

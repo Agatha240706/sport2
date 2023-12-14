@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+      {% endwith %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+    <div class="header">
+        <h1>{{ Titulo }}</h1>
+    </div>
+    {% for sport in ListaSport %}
+    <div class="sport-card">
+        <h2>Nome: {{ sport.nome }}</h2>
+        <img src="/static/sport.png">
+        <p>Jogo de interesse: {{ sport.jogo }}</p>
+        <p>Posição: {{ sport.posicao }}</p>
+        <p>Ranking: {{ sport.ranking }}</p>
+        <br>
+         <a href="excluir/{{ sport.nome }}">Excluir</a>
+        <a href="editar/{{ sport.nome }}">Editar</a>
+    </div>
+    {% endfor %}
+    {#para encerrar o for#}
+
+
+</body>
+</html>
